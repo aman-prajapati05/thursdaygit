@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+      *{
+        ::selection{
+          background-color: red;
+          color: #ccc;
+        }
+      }
+body{
+  background:url(resources/christian-wiediger-WkfDrhxDMC8-unsplash.jpg) no-repeat center fixed;
+}
+.heading{
+  text-align: center;
+}
+.container{
+  display: flex;
+  justify-content: center;
+}
+.dropdown-check-list {
+  display: inline-block;
+}
+
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 50px 5px 10px;
+  border: 1px solid #ccc;
+  width: 86px;
+}
+
+.dropdown-check-list .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  padding: 5px;
+  right: 10px;
+  top: 20%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.dropdown-check-list .anchor:active:after {
+  right: 8px;
+  top: 21%;
+}
+
+.dropdown-check-list ul.items {
+  padding: 2px;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 50px;
+  width: 142px;
+}
+
+.dropdown-check-list ul.items li {
+  list-style: none;
+  position: absolute;
+}
+#two{
+  margin-top: 15px;
+}
+#three{
+  margin-top: 30px;
+}
+
+.dropdown-check-list.visible .anchor {
+  color: #0094ff;
+}
+
+.dropdown-check-list.visible .items {
+  display: block;
+}
+    </style>
+</head>
+<body>  <div class="heading"> <h1>Survey Form</h1></div>
+  <div class="container">
+   
+    
+    
+    <div>
+    <form action="thankyou.html">
+      <fieldset>
+        <label > Name:</label>
+        <input><br><br>
+        <label >Email:</label>
+        <input type="email"><br><br
+        <label> Age: </label>
+        <input type="number"><br><br>
+        <label for="">Which option best describe your current Role?</label>
+        <select name="" id="">
+            <option value="Student">Student</option>
+            <option value="Teacher">Teacher</option>
+            <option value="Hod">HOD</option>
+            <option value="others">Others</option>
+        </select>
+        <div>
+            <p>How likely is that you would recommened this course to a friend?</p>
+
+        <label for="rating">
+            
+            <input type="radio" name="rating" id="Definitely">
+            Definitely
+        </label>
+        <label for="rating">
+            <input type="radio" name="rating" id="May Be">
+            May Be
+        </label>
+        <label for="rating">
+            <input type="radio" name="rating" id="Not sure">
+            Not sure
+        </label><br><br>
+    </div>
+<br>
+    <span>
+        What do you like most in this course:
+      </span>
+    
+    <span id="list1" class="dropdown-check-list" tabindex="100">
+        <span class="anchor">Select </span>
+        <ul class="items">
+          <li id="one"><input type="checkbox" />Front-End Projects </li>
+          <li id="two"><input type="checkbox" />Back-End Projects</li>
+          <li id="three"><input type="checkbox" />Data Visualisation</li>
+        </ul>
+      </span>
+  
+</form>
+</div>
+</div>
+<script>
+       var checkList = document.getElementById('list1');
+checkList.getElementsByClassName('anchor')[0].onclick = function(evt) {
+  if (checkList.classList.contains('visible'))
+    checkList.classList.remove('visible');
+  else
+    checkList.classList.add('visible');
+}
+    </script>
+</body>
+</html>

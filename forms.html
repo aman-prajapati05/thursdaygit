@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning about forms</title>
+</head>
+<body>
+    <form action="./thankyou.html" method="POST" target="_blank">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Atmaram" ><br><br>
+            <label for="email">Email id:</label>
+            <input type="email" id="email" placeholder="demo@gmail.com"><br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" required><br><br>
+            <label for="profile-icon-design-free-vector">Profile Picture:</label>
+            <input type="file" id="profile-icon-design-free-vector" required><br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required><br><br>
+            <label for="phone">Mobile Number:</label>
+            <input type="number" id="phone" placeholder="987654321" required><br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset Form</button>
+        </fieldset> 
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color"><br><br>
+            <label for="fruit"></label>
+            <select id="fruit" required>
+                <option value="apple">Apple</option>
+                <option value="Banana">Banana</option>
+                <option value="Orange">Orange</option>
+                <option value="apple">Kiwi</option>
+                <option value="Banana">Watermelon</option>
+                <option value="Orange">Grapes</option>
+            </select><br><br>
+            <label for="comments">COMMENTS:</label>
+            <textarea id="comments" cols="40" rows="3" placeholder="Enter Your comments"></textarea>
+            <label for="checkbox">
+                <input type="checkbox" value="YES">
+                Subscribe to Newsletter
+            </label><br><br>
+            <label for="GENDER">
+                <input type="radio" name="GENDER" id="MALE">
+                MALE
+            </label>
+            <label for="GENDER">
+                <input type="radio" name="GENDER" id="FEMALE">
+                FEMALE
+            </label>
+            <label for="GENDER">
+                <input type="radio" name="GENDER" id="others">
+                Decline to specify
+            </label><br><br>
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" list="skills-list" required>
+            <datalist id="skills-list">
+                <option value="HTML">
+                <option value="CSS">
+                <option value="Javascript">
+                <option value="Python">
+            </datalist>
+        </fieldset> 
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+}
+
+div{
+    background-color: #4fc3b7;
+    padding: 60px; 
+    text-align: center;
+}
+h1{
+    color: rgb(0, 0, 0);
+}
+p{
+    font-size: 20px;
+}
+button{
+    background-color: #e8e693;
+    color: rgb(59, 54, 5); 
+    padding: 10px 15px;
+    border-radius: 24px;
+    font-style: italic;
+}
